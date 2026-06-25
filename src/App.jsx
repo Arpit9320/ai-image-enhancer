@@ -7,7 +7,7 @@ import ImageContainer from "./components/ImageContainer"
 
 const App = () => {
   return (
-    <div className="main h-screen w-full bg-[rgb(235, 235, 235)]  font-sans flex flex-col justify-start items-center lg:gap-[2vw] pt-4">
+    <div className="main min-h-screen w-full bg-[rgb(235,235,235)]  font-sans flex flex-col justify-start items-center  pt-4">
       <Header/>
 
       <ActionBtn/>

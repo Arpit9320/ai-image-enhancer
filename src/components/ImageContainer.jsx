@@ -1,20 +1,21 @@
-import React from 'react'
-import Original from './Original'
-import Enhanced from './Enhanced'
+import ImageCard from "./ImageCard"
+
 
 const ImageContainer = () => {
-  return (
-    <div className="flex lg:flex-row flex-col justify-center items-center gap-6 lg:mt-[5vw] mt-[9vw]">
 
-      <div className="original bg-white lg:h-[15vw] lg:w-[20vw] h-[30vh] w-[40vh] flex flex-col rounded-xl  shadow-black shadow-2xl">
-        <h4 className="text-black text-center bg-blue-950 font-semibold pb-0.5 rounded-t-lg">Original Image</h4>
-        <Original/>
-      </div>
+
+  
+
+  return (
+    <div className='mt-8 grid grid-cols-1 md:grid-cols-2 gap-6 lg:w-full max-w-xl w-[85%] justify-center lg:mr-0 mr-5'>
+
+      {/* original image */}
+
+      <ImageCard heading = {'Original Image'} status = {'No Image Selected'}/>
+
+      {/* Enhanced image */}
       
-      <div className="enhanced bg-white lg:h-[15vw] lg:w-[20vw] h-[30vh] w-[40vh] flex flex-col rounded-xl shadow-black shadow-2xl">
-        <h4 className="text-black text-center bg-blue-800 font-semibold pb-0.5 rounded-t-lg ">Enhanced Image</h4>
-        <Enhanced/>
-      </div>
+      <ImageCard heading = {'Enhanced Image'} status = {'Select Image to Enhance'}/>
 
     </div>
   )
