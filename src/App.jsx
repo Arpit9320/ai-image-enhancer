@@ -1,4 +1,5 @@
 import ActionBtn from "./components/ActionBtn"
+import Footer from "./components/Footer"
 import Header from "./components/Header"
 import ImageContainer from "./components/ImageContainer"
 
@@ -12,6 +13,8 @@ const App = () => {
       <ActionBtn/>
 
       <ImageContainer/>
+
+      <Footer/>
     </div>
 
   )
