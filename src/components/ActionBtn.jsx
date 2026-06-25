@@ -4,7 +4,7 @@ import { ImageSrc } from './Context/Image'
 
 const ActionBtn = () => {
 
-  const [Previewimg, setPreviewimg, file, setFile] = useContext(ImageSrc)
+  const {Previewimg, setPreviewimg, file, setFile} = useContext(ImageSrc)
 
   const imagePreview = (dets)=>{
     const selectedFile = dets.target.files[0]

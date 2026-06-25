@@ -1,9 +1,12 @@
 import ImageCard from "./ImageCard"
+import { ImageSrc } from './Context/Image'
+import { useContext} from 'react'
 
 
 const ImageContainer = () => {
 
 
+  const {Previewimg, setPreviewimg, loader, Enhancedimg} = useContext(ImageSrc)
   
 
   return (
@@ -11,11 +14,11 @@ const ImageContainer = () => {
 
       {/* original image */}
 
-      <ImageCard heading = {'Original Image'} status = {'No Image Selected'}/>
+      <ImageCard heading = {'Original Image'} status = {'No Image Selected'} src={Previewimg} bg={'bg-gray-800'}/>
 
       {/* Enhanced image */}
       
-      <ImageCard heading = {'Enhanced Image'} status = {'Select Image to Enhance'}/>
+      <ImageCard heading = {'Enhanced Image'} status = {'Select Image to Enhance'} showloader={loader} src={Enhancedimg} bg={'bg-blue-800'}/>
 
     </div>
   )

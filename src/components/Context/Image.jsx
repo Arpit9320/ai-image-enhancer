@@ -10,11 +10,14 @@ const Image = (props) => {
     const [file, setFile] = useState(null)
     
     const [Enhancedimg, setEnhancedimg] = useState(null)
+    
+    const [loader, setLoader] = useState(false)
+
 
   return (
     <div>
       
-        <ImageSrc.Provider value={[Previewimg, setPreviewimg, file, setFile,Enhancedimg, setEnhancedimg]}>
+        <ImageSrc.Provider value={{Previewimg, setPreviewimg, file, setFile, Enhancedimg, setEnhancedimg, loader, setLoader}}>
             {props.children}
         </ImageSrc.Provider>
 
