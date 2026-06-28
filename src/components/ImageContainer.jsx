@@ -10,7 +10,7 @@ const ImageContainer = () => {
   
 
   return (
-    <div className='mt-8 grid grid-cols-1 md:grid-cols-2 lg:gap-0 gap-6 w-[85%] max-w-xl mx-auto bg-red-500 place-items-center'>
+    <div className='mt-8 grid grid-cols-1 md:grid-cols-2 gap-6 lg:w-full max-w-xl w-[85%] justify-center lg:mr-0 mr-5'>
 
       {/* original image */}
 
