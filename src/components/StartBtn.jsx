@@ -1,26 +1,25 @@
 import { useContext, useEffect} from "react"
 import { ImageSrc } from "./Context/Image"
-import { ehanceimage } from './enhanceImageApi';
+import { enhanceimage } from './enhanceImageApi';
 
 
 const StartBtn = () => {
 
-  const {Previewimg, file, loader, setLoader, setEnhancedimg} = useContext(ImageSrc)
+  const {file, loader, setLoader, setEnhancedimg} = useContext(ImageSrc)
 
-  
-  const startEnhancing = async ()=>{
-    setLoader(true)
+
+  const startEnhancing = async () => {
+    setLoader(true);
 
     try {
-      const enhancedImgUrl = await ehanceimage(file, Previewimg);  
-      setLoader(false)
-      setEnhancedimg(enhancedImgUrl)
+        const enhancedImgUrl = await enhanceimage(file);
+        setEnhancedimg(enhancedImgUrl);
     } catch (error) {
-      console.log('Error occured')
+        console.log("Error occurred");
+    } finally {
+        setLoader(false);
     }
-
-    
-  }
+}
 
 
   const isDisabled = !file || loader;
