@@ -6,7 +6,7 @@ import { useContext} from 'react'
 const ImageContainer = () => {
 
 
-  const {Previewimg, setPreviewimg, loader, Enhancedimg} = useContext(ImageSrc)
+  const {Previewimg, loader, Enhancedimg} = useContext(ImageSrc)
   
 
   return (

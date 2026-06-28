@@ -16,12 +16,13 @@ const ExportBtn = () => {
 
     link.download = filename
     link.click();
-    document.body.removeChild(link);
   }
 
   return (
     <>
-      <button className="text-black bg-yellow-600 border-none outline-none px-6 lg:text-[1.1vw] text-[3vw] font-medium hover:bg-yellow-700 transition-all ease cursor-not-allowed rounded-md py-2" disabled={isDisabled} onClick={downloadimg}>Download</button>
+      <button className= {`text-black  border-none outline-none px-6 lg:text-[1.1vw] text-[3vw] font-medium  transition-all ease rounded-md py-2 
+      ${isDisabled? "cursor-not-allowed bg-yellow-600"
+      : "cursor-pointer bg-yellow-600 hover:bg-yellow-700"}`} disabled={isDisabled} onClick={downloadimg}>Download</button>
     </>
   )
 }
