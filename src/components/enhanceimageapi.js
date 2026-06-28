@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API_key = 'wxo622iosuwmqcmb0'
+const API_key = import.meta.env.VITE_API_KEY;
 const BASE_URL = 'https://techhk.aoscdn.com'
 
 
@@ -8,12 +8,11 @@ export const enhanceimage = async (file)=>{
     try {
 
         const task_id = await uploadImg(file);
-        console.log("Image uploaded successfully, Task ID:", task_id );
+        console.log("Image uploaded successfully, Task ID");
 
         const enahncedImgData = await fetchImg(task_id);
-        console.log("Enhanced Image Data:", enahncedImgData );
+        console.log("Enhanced Image Data Received");
 
-        console.log(enahncedImgData);
         return enahncedImgData
 
          
@@ -38,7 +37,7 @@ const uploadImg = async (file)=>{
         }
     })
 
-    console.log("Upload Response:", data);
+    console.log("Uploaded Response");
 
     if(!data?.data?.task_id){
         throw new Error("Failed to upload image! Task Id not found");
@@ -63,8 +62,6 @@ const fetchImg = async(task_id)=>{
                 "X-API-KEY": API_key
             }
         })
-
-        console.log(data.data);
 
         progress = data.data.progress
 
