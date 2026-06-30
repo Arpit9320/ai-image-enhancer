@@ -10,7 +10,7 @@ The primary goal of this project was to strengthen my understanding of asynchron
 
 ## 🌐 Live Demo
 
-> **Live Application:** *(Add Vercel URL here after deployment)*
+> **Live Application:** *https://ai-image-enhancer-two-rust.vercel.app/*
 
 ---
 
