@@ -1,6 +1,6 @@
 import { useContext, useEffect} from "react"
 import { ImageSrc } from "./Context/Image"
-import { enhanceimage } from './enhanceImageApi';
+import { enhanceimage } from './enhanceimageapi';
 
 
 const StartBtn = () => {
